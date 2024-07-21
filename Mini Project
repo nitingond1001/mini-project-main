@@ -1,0 +1,39 @@
+# mini-project
+
+
+//This is my First Mini Project using Java....
+
+import java.util.Scanner; //This is Scanner function for take input from user...
+
+public class Mini_Project{   //This is our class function
+    
+    public static void main(String[] args){     // Main method 
+
+        Scanner sc = new Scanner(System.in);   // taking input from user....
+
+        int myNumber = (int)(Math.random()*100);   // this is my random int number which you have to guess..... 
+
+        int userNumber = 0;   // the integer value start with 0 thats why we take integer value as a 0......
+        
+        do{      // here we use do while function 
+
+            System.out.println("Guess my number(1-100) :");  //
+            userNumber = sc.nextInt();               // it means here you have to put any random number and guess the random number....
+
+            if(userNumber == myNumber){ // it means you have to guess that number which is equal to my number....
+                System.out.println("\nWoohoo......coreect answer");  //it means if you guess the right answer than it print Woohoo....correct answer
+                break;   // after guessing right number you will be gone out from this programm......
+            } 
+
+            else if(userNumber > myNumber){    //here is the condition 
+                System.out.println("Your number is too large :\n");  // it prints when you put large number than my number....
+            }
+
+            else{   // otherwise its print second statement....
+                System.out.println("Your number is too small :\n");   // it is the second statement
+            }
+        } while(userNumber >= 0); // here is the condition (it will be continue untill and unless you gave me the right answer.....)
+        System.out.println("myNumber was :" +myNumber);  //it is the statement means, when you put right answer its print with your number...
+        sc.close();  // here we close the Scanner function which we have took first in our programm.....
+    }
+}
